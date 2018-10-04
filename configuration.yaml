@@ -44,3 +44,9 @@ script: !include scripts.yaml
 
 rachio:
   api_key: !secret rachio_api_key
+
+panel_iframe:
+  rachio:
+    title: Rachio
+    url: "https://app.rach.io"
+    icon: mdi:water-pump
