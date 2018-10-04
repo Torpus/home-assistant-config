@@ -41,3 +41,6 @@ cloud:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+
+rachio:
+  api_key: !secret rachio_api_key
