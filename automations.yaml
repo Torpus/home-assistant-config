@@ -1,3 +1,4 @@
+# Front door lights
 - alias: 'Front door light on'
   trigger: 
   - platform: sun
@@ -15,3 +16,9 @@
   action:
   - service: light.turn_off
     entity_id: light.front_door
+
+# Living room lights
+- alias: 'Living room lights on'
+  trigger:
+  - platform: state
+    entity_id: 
