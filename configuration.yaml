@@ -34,7 +34,7 @@ sensor:
     region: !secret waze_region
   - platform: hue
     ip_address: !secret hue_ip_address
-    token: !secret_hue_token
+    token: !secret hue_token
 
 tts:
   - platform: google
