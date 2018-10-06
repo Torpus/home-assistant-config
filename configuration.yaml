@@ -50,3 +50,9 @@ panel_iframe:
     title: Rachio
     url: "https://app.rach.io"
     icon: mdi:water-pump
+
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://0.0.0.0:3218
