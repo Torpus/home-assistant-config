@@ -5,26 +5,18 @@ homeassistant:
   elevation: !secret home_elevation
   unit_system: imperial
   time_zone: !secret home_time_zone
-  # Customization file
   customize: !include customize.yaml
 
-frontend:
-
+cloud:
 config:
-
-updater:
-
-discovery:
-
 conversation:
-
+discovery:
+frontend:
 history:
-
 logbook:
-
 map:
-
 sun:
+updater:
 
 sensor:
   - platform: yr
@@ -35,8 +27,6 @@ sensor:
 
 tts:
   - platform: google
-
-cloud:
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -50,3 +40,7 @@ panel_iframe:
     title: Rachio
     url: "https://app.rach.io"
     icon: mdi:water-pump
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: !secret hass_url
