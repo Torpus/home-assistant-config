@@ -44,3 +44,7 @@ panel_iframe:
     title: Configurator
     icon: mdi:wrench
     url: !secret configurator_url
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
