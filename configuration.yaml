@@ -5,26 +5,18 @@ homeassistant:
   elevation: !secret home_elevation
   unit_system: imperial
   time_zone: !secret home_time_zone
-  # Customization file
   customize: !include customize.yaml
 
-frontend:
-
+cloud:
 config:
-
-updater:
-
-discovery:
-
 conversation:
-
+discovery:
+frontend:
 history:
-
 logbook:
-
 map:
-
 sun:
+updater:
 
 sensor:
   - platform: yr
@@ -36,8 +28,6 @@ sensor:
 
 tts:
   - platform: google
-
-cloud:
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -55,3 +45,7 @@ panel_iframe:
     title: Configurator
     icon: mdi:wrench
     url: !secret configurator_url
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret

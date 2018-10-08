@@ -117,3 +117,15 @@ family_room_nest_protect:
     - binary_sensor.family_room_nest_protect_online
     - sensor.family_room_nest_protect_co_status
     - sensor.family_room_nest_protect_smoke_status
+
+# Living room day group
+living_room_day:
+    name: living_room_day
+    icon: mdi:account-multiple
+    view: yes
+    entities:
+      - light.floor_lamp
+      - light.downlight_1
+      - light.downlight_2
+      - light.dining_room_table
+      - light.kitchen_sink
