@@ -54,4 +54,4 @@ panel_iframe:
   configurator:
     title: Configurator
     icon: mdi:wrench
-    url: !secret hass_url
+    url: !secret configurator_url

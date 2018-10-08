@@ -1,0 +1,119 @@
+# Main tabs
+sams_room:
+  name: Sam's room
+  view: yes
+  entities:
+    - group.sams_room_nest_protect
+    - group.sams_room_nest_cam
+    - light.sams_room
+    
+maggies_room:
+  name: Maggie's room
+  view: yes
+  entities:
+    - group.maggies_room_nest_protect
+    - group.maggies_room_nest_cam
+    - group.maggies_room_nest_thermostat
+    - light.maggies_room
+    
+master_bedroom:
+  name: Master Bedroom
+  view: yes
+  entities:
+    - light.parents_room
+    
+family_room:
+  name: Family room
+  view: yes
+  entities:
+    - group.family_room_nest_thermostat
+    - group.family_room_nest_protect
+    - light.family_room
+
+# Sams room groups
+sams_room_nest_protect:
+  name: Sam's room - Nest Protect
+  view: no
+  entities:
+    - sensor.sams_room_nest_protect_battery_health
+    - sensor.sams_room_nest_protect_color_status
+    - binary_sensor.sams_room_nest_protect_online
+    - sensor.sams_room_nest_protect_co_status
+    - sensor.sams_room_nest_protect_smoke_status
+    
+sams_room_nest_cam:
+  name: Sam's room - Nest Cam
+  view: no
+  entities:
+    - camera.sams_room
+    - binary_sensor.sams_room_camera_motion_detected
+    - binary_sensor.sams_room_camera_sound_detected
+    - binary_sensor.sams_room_camera_person_detected
+    - binary_sensor.sams_room_camera_online
+
+# Maggies room groups
+
+maggies_room_nest_protect:
+  name: Maggie's room - Nest Protect
+  view: no
+  entities:
+    - sensor.maggies_room_nest_protect_battery_health
+    - sensor.maggies_room_nest_protect_co_status
+    - sensor.maggies_room_nest_protect_color_status
+    - binary_sensor.maggies_room_nest_protect_online
+    - sensor.maggies_room_nest_protect_co_status
+    - sensor.maggies_room_nest_protect_smoke_status
+    
+maggies_room_nest_cam:
+  name: Maggie's room - Nest Cam
+  view: no
+  entities:
+    - camera.maggies_room
+    - binary_sensor.maggies_room_camera_motion_detected
+    - binary_sensor.maggies_room_camera_sound_detected
+    - binary_sensor.maggies_room_camera_person_detected
+    - binary_sensor.maggies_room_camera_online
+    
+maggies_room_nest_thermostat:
+  name: Maggie's room - Nest Thermostat
+  view: no
+  entities:
+    - climate.maggies_room
+    - binary_sensor.maggies_room_thermostat_fan
+    - binary_sensor.maggies_room_thermostat_is_using_emergency_heat
+    - binary_sensor.maggies_room_thermostat_is_locked
+    - binary_sensor.maggies_room_thermostat_has_leaf
+    - sensor.maggies_room_thermostat_humidity
+    - sensor.maggies_room_thermostat_operation_mode
+    - sensor.maggies_room_thermostat_hvac_state
+    - sensor.maggies_room_thermostat_temperature
+    - binary_sensor.maggies_room_thermostat_online
+    - sensor.maggies_room_thermostat_target
+
+# Family room groups
+    
+family_room_nest_thermostat:
+  name: Family room - Nest Thermostat
+  view: no
+  entities:
+    - climate.family_room
+    - binary_sensor.family_room_thermostat_fan
+    - binary_sensor.family_room_thermostat_is_using_emergency_heat
+    - binary_sensor.family_room_thermostat_is_locked
+    - binary_sensor.family_room_thermostat_has_leaf
+    - sensor.family_room_thermostat_humidity
+    - sensor.family_room_thermostat_operation_mode
+    - sensor.family_room_thermostat_hvac_state
+    - sensor.family_room_thermostat_temperature
+    - binary_sensor.family_room_thermostat_online
+    - sensor.family_room_thermostat_target
+    
+family_room_nest_protect:
+  name: Family room - Nest Protect
+  view: no
+  entities:
+    - sensor.family_room_nest_protect_battery_health
+    - sensor.family_room_nest_protect_color_status
+    - binary_sensor.family_room_nest_protect_online
+    - sensor.family_room_nest_protect_co_status
+    - sensor.family_room_nest_protect_smoke_status
