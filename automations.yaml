@@ -1,4 +1,6 @@
+# Front door lights
 - alias: 'Front door light on'
+  initial_state: True
   trigger: 
   - platform: sun
     event: sunset
@@ -8,6 +10,7 @@
     entity_id: light.front_door
     
 - alias: 'Front door light off'
+  initial_state: True
   trigger:
   - platform: sun
     event: sunrise

@@ -25,6 +25,7 @@ sensor:
     destination: !secret waze_destination
     region: !secret waze_region
 
+
 tts:
   - platform: google
 
