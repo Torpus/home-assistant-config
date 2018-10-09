@@ -24,6 +24,19 @@ sensor:
     origin: !secret waze_origin
     destination: !secret waze_destination
     region: !secret waze_region
+  - platform: hue
+    ip_address: !secret hue_ip_address
+    token: !secret hue_token
+  - platform: template
+    sensors:
+      family_room_temperature:
+        friendly_name: 'Family room temperature'
+        value_template: '{{states.sensor.family_room_motion_sensor.attributes.temperature}}'
+        unit_of_measurement: °C
+      family_room_light_level:
+        friendly_name: 'Family room light level'
+        value_template: '{{states.sensor.family_room_motion_sensor.attributes.lx}}'
+        unit_of_measurement: lux
 
 
 tts:
@@ -49,3 +62,4 @@ panel_iframe:
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
+

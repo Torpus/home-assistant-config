@@ -29,6 +29,7 @@ family_room:
     - group.family_room_nest_thermostat
     - group.family_room_nest_protect
     - light.family_room
+    - group.family_room_hue_sensor
 
 # Sams room groups
 sams_room_nest_protect:
@@ -117,15 +118,11 @@ family_room_nest_protect:
     - binary_sensor.family_room_nest_protect_online
     - sensor.family_room_nest_protect_co_status
     - sensor.family_room_nest_protect_smoke_status
-
-# Living room day group
-living_room_day:
-    name: living_room_day
-    icon: mdi:account-multiple
-    view: yes
-    entities:
-      - light.floor_lamp
-      - light.downlight_1
-      - light.downlight_2
-      - light.dining_room_table
-      - light.kitchen_sink
+    
+family_room_hue_sensor:
+  name: Family room - Hue Sensor
+  view: no
+  entities:
+    - sensor.family_room_motion_sensor
+    - sensor.family_room_temperature
+    - sensor.family_room_light_level
