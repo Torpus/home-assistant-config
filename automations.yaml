@@ -34,7 +34,7 @@
   trigger:
     platform: time
     at: '17:00:00'
-  conditions:
+  condition:
     - condition: template
       value_template: '{{states.sensor.family_room_motion_sensor.attributes.lx < 25}}'
   action:
@@ -51,7 +51,7 @@
   trigger:
     platform: time
     at: '18:00:00'
-  conditions:
+  condition:
     - condition: template
       value_template: '{{states.sensor.family_room_motion_sensor.attributes.lx < 25}}'
   action:
