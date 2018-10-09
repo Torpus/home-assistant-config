@@ -38,13 +38,10 @@
     - condition: template
       value_template: '{{states.sensor.family_room_motion_sensor.attributes.lx < 25}}'
   action:
-    - script:
-      porch_on:
-      sequence:
-      - service: hue.hue_activate_scene
-        data:
-          group_name: "Family room"
-          scene_name: "Read"
+    service: hue.hue_activate_scene
+    data:
+      group_name: "Family room"
+      scene_name: "Read"
 
 - alias: 'Living room lights - 6-7pm'
   initial_state: True
@@ -55,10 +52,7 @@
     - condition: template
       value_template: '{{states.sensor.family_room_motion_sensor.attributes.lx < 25}}'
   action:
-    - script:
-      porch_on:
-      sequence:
-      - service: hue.hue_activate_scene
-        data:
-          group_name: "Family room"
-          scene_name: "Relax"
+    service: hue.hue_activate_scene
+    data:
+      group_name: "Family room"
+      scene_name: "Relax"
