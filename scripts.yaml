@@ -4,7 +4,7 @@ living_room_night_light:
     # Cancel ev. old timers
     - service: script.turn_off
       data:
-         entity_id: script.timer_off
+         entity_id: script.living_room_timer_off
     - service: light.turn_on
       data:
         entity_id: light.living_room
@@ -12,7 +12,7 @@ living_room_night_light:
     - service: script.turn_on
       data:
         entity_id: script.timer_off
-timer_off:
+living_room_timer_off:
   alias: "Turn off lamp after 5 minutes"
   sequence:
     - delay:
@@ -27,7 +27,7 @@ upstairs_hall_night_light:
     # Cancel ev. old timers
     - service: script.turn_off
       data:
-         entity_id: script.timer_off
+         entity_id: script.upstairs_hall_timer_off
     - service: light.turn_on
       data:
         entity_id: light.upstairs_hall
@@ -35,7 +35,7 @@ upstairs_hall_night_light:
     - service: script.turn_on
       data:
         entity_id: script.timer_off
-timer_off:
+upstairs_hall_timer_off:
   alias: "Turn off lamp after 1 minutes"
   sequence:
     - delay:
