@@ -121,3 +121,18 @@
   action:
     service: homeassistant.turn_on
     entity_id: script.living_room_night_light
+
+# Upstairs hall light automation
+- alias: 'Upstairs hall lights - night light after 9pm'
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: sensor.upstairs_hall_motion_sensor
+    to: 'on'
+  condition:
+    - condition: time
+      after: '21:00:00'
+      before: '06:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.upstairs_hall_night_light
