@@ -98,6 +98,7 @@
     data:
       group_name: "Family room"
       scene_name: "9pm"
+
 - alias: 'Living room lights - after 11pm'
   initial_state: True
   trigger:
@@ -115,8 +116,8 @@
     to: 'on'
   condition:
     - condition: time
-    after: '23:00:00'
-    before: '06:00:00'
+      after: '23:00:00'
+      before: '06:00:00'
   action:
     service: homeassistant.turn_on
     entity_id: script.timed_lamp
