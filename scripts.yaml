@@ -1,4 +1,4 @@
-timed_lamp:
+living_room_night_light:
   alias: "Turn on lamp and set timer"
   sequence:
     # Cancel ev. old timers
