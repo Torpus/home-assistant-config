@@ -113,6 +113,10 @@
     platform: state
     entity_id: sensor.family_room_motion_sensor
     to: 'on'
+  condition:
+    - condition: time
+    after: '23:00:00'
+    before: '06:00:00'
   action:
     service: homeassistant.turn_on
     entity_id: script.timed_lamp
